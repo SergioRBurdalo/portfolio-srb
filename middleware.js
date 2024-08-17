@@ -1,13 +1,11 @@
+// middleware.js
 import createMiddleware from 'next-intl/middleware';
- 
+
 export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ['es', 'en'],
-  // Used when no locale matches
-  defaultLocale: 'es'
+  locales: ['en', 'es'], // Idiomas soportados
+  defaultLocale: 'en'     // Idioma por defecto
 });
- 
+
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ['/', '/(es|en)/:path*']
+  matcher: ['/((?!api|_next|favicon.ico).*)'], // Aplica el middleware a todas las rutas excepto las especificadas
 };

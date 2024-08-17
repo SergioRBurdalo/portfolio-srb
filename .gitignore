@@ -1,1 +1,7 @@
+# Node
 /node_modules
+# Next.js
+.next/
+
+# Mac
+.DS_Store

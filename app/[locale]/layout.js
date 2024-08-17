@@ -1,12 +1,12 @@
-import { Inter } from 'next/font/google'
-import '../globals.css'
+import { Inter } from 'next/font/google';
+import '../globals.css';
 import { useLocale } from 'next-intl';
-import {notFound} from 'next/navigation';
- 
+import { notFound, redirect } from 'next/navigation';
+
 // Can be imported from a shared config
 const locales = ['en', 'es'];
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'SRB Portfolio',
@@ -14,12 +14,15 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  // Validate that the incoming `locale` parameter is valid
   const locale = useLocale();
-  if (!locales.includes(locale)) notFound();
+
+  if (!locales.includes(locale)) {
+    redirect(`/en`); // Redirigir al idioma inglés si el locale no es válido
+  }
+
   return (
     <html lang={locale}>
       <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }

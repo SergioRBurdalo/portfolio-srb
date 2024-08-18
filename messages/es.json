@@ -7,6 +7,10 @@
             "hire":"Contactame",
             "CV":"Descargar CV"
           },
+          "aboutSection":{
+            "title":"Sobre mi",
+            "description":"Soy un desarrollador web full stack con pasión por crear aplicaciones web interactivas y responsivas. Tengo experiencia trabajando con JavaScript, React, Redux, Node.js, Express, PostgreSQL, Sequelize, HTML, CSS y Git. Aprendo rápido y siempre estoy buscando expandir mis conocimientos y habilidades. Trabajo bien en equipo y estoy entusiasmado por trabajar con otros para crear aplicaciones increíbles."
+          },
           "navbar":{
             "about":"Sobre mí",
             "contact":"Contacto",

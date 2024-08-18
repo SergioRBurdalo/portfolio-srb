@@ -6,8 +6,8 @@ import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
 import MenuOverlay from './MenuOverlay';
 import Image from 'next/image';
 
-import logoDesktop from '../assets/logoNavBarwhite.png';  // Imagen para escritorio
-import logoMobile from '../assets/logoNBG-white copia.png';  // Imagen para móvil
+import logoDesktop from '../../public/images/logoNavBarwhite.png';  // Imagen para escritorio
+import logoMobile from '../../public/images/icon-logoNBG-white.png';  // Imagen para móvil
 
 const Navbar = ({navLinks}) => {
     const [navbarOpen, setNavarOpen] = useState(false);
